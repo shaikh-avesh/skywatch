@@ -1,4 +1,4 @@
-* {
+ * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -15,7 +15,7 @@ body {
 /* front page */
 
 .front-page {
-  background-image: url(main-bg-images/mountains-1728368320694-8336.jpg);
+  background-image: url(mountain.jpg);
   background-size: cover;
   background-position: center;
   transition: background-color 0.3s ease;
@@ -603,7 +603,7 @@ footer p:last-child {
 
 /* Apply dark mode styles */
 body.dark-mode .front-page {
-  background-image: url(main-bg-images/dark-mountain.jpg);
+  background-image: url(dark-mountain.jpg);
 }
 
 /* Dark Mode Variables */
