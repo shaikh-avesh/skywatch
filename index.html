@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sky Watch</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="icon" type="image/x-icon" href="logo2.jpg">
+
+
+</head>
+
+<body>
+  <div class="front-page">
+    <header>
+      <div class="navbar" id="navbar">
+        <h1>Sky Watch</h1>
+        <ul>
+          <li><a href="#weather-container">Weather</a></li>
+          <li><a href="#forecast">Forecast</a></li>
+          <li><a href="#recent-search">Recent Search</a></li>
+          <li><a href="#temperatureChart">Chart</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          
+        </ul>
+        <div class="theme-toggle">
+          <i class="fas fa-sun" id="sun-icon" style="display: none;"></i>
+          <i class="fas fa-moon" id="moon-icon"></i>
+        </div>
+      </div>
+    </header>
+
+    <!-- Current Weather Display -->
+    <div class="weather-container " id="weather-container">
+      <section class="weather-dis">
+        <div class="weather-display" id="weather-display">
+          <!-- Main Weather Section -->
+          <div class="container">
+            <!-- Search Bar -->
+            <h2 id="cityName">City Name</h2>
+            <p id="temp">--°C</p>
+            <p id="condition">-- | condition</p>
+            <p id="wind">-- km/h | wind</p>
+            <p id="humidity">-- % | humidity</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="container-2">
+        <div class="added-text">
+          <p> <a>--- Weather and Forecast</a></p>
+          <h1>Daily Weather Forecast<br> Update News</h1>
+          <p>Get the latest weather forecast for today with up to-date <br>information on temperature, precipitation,
+            and
+            more.</p>
+        </div>
+        <!-- search -->
+        <div class="search-bar">
+          <input type="text" id="citySearch" placeholder="Search for Location... ">
+          <button id="searchBtn">Get Weather</button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="second-page">
+    <!-- 7-Day Forecast Section -->
+    <div class="forecast" id="forecast">
+      <h2>7-Day Forecast</h2>
+      <div class="forecast-cards" id="forecast-cards">
+        <!-- Forecast cards will be dynamically added here -->
+      </div>
+    </div>
+  </div>
+
+
+  <div class="third-page" id="third-page">
+    <section class="recent-search" id="recent-search">
+      <h2>Recent Search Weather</h2>
+      <p id="text"> The 'Recent Search Weather' section displays the latest weather information for the cities you have
+        recently
+        searched.<br> Stay up-to-date with the weather conditions of your preferred cities with this section.</p>
+      <ul id="recentSearchList"></ul>
+    </section>
+  </div>
+
+  <div class="container-3">
+  <div class="fourth-page">
+    <h1>Daily Temperature Over Time</h1>
+    <div class="chart-container">
+      <canvas id="temperatureChart"></canvas>
+  </div>
+  </div>
+    <div class="fifth-page">
+      <h1>Map Location Current City</h1>
+    <div class="map-container" id="map-container">
+      <div id="map"></div>
+    </div>
+    </div>
+</div>
+    
+    <footer>
+      <div class="footer-content">
+          <h2>Sky Watch</h2>
+          <ul class="footer-menu">
+              <li><a href="#">About</a></li>
+              <li><a href="#forecast">Forecast</a></li>
+              <li><a href="#recent-search">Recent Search</a></li>
+              <li><a href="#temperatureChart">Temp Chart</a></li>
+              <li><a href="#map-container">Map</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <div class="social-icons">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-pinterest"></i></a>
+              <a href="#"><i class="fab fa-dribbble"></i></a>
+          </div>
+          <p>&copy; Sky watch. All Rights Reserved.</p>
+          <p>Designed & Developed by Avesh Shaikh</p>
+      </div>
+  </footer>
+  <script>
+    const toggleSwitch = document.querySelector('.theme-toggle');
+  
+    toggleSwitch.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+    });
+  </script>
+  
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>

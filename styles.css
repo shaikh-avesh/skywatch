@@ -1,0 +1,862 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+  /* font-family:  system-ui;
+  font-family: 'Arial', sans-serif; */
+  color: #333;
+}
+
+/* front page */
+
+.front-page {
+  background-image: url(main-bg-images/mountains-1728368320694-8336.jpg);
+  background-size: cover;
+  background-position: center;
+  transition: background-color 0.3s ease;
+  transition: background-image 0.5s ease-in-out;
+}
+
+header {
+  text-align: center;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #ff5722;
+}
+
+header p {
+  font-size: 18px;
+  color: #666;
+}
+
+/* Header Styling */
+header {
+  padding: 20px;
+  /* Padding around header */
+  text-align: center;
+  /* Center text */
+  display: flex;
+  /* Flexbox for layout */
+  justify-content: space-between;
+  /* Space between items */
+  align-items: center;
+  /* Center items vertically */
+  flex-wrap: wrap;
+  /* Wrap elements on small screens */
+}
+
+/* Navbar Styling */
+.navbar {
+  width: 100%;
+  display: flex;
+  /* Flexbox for navbar */
+  height: 100%;
+  /* Full height of header */
+  justify-content: space-between;
+  /* Space between elements */
+  align-items: center;
+  /* Center items vertically */
+  flex-wrap: wrap;
+  /* Wrap on small screens */
+}
+
+/* Navbar Unordered List */
+.navbar ul {
+  display: flex;
+  /* Flexbox for list items */
+  list-style: none;
+  /* Remove bullets */
+  margin: 0;
+  /* Remove default margin */
+  padding: 0;
+  /* Remove default padding */
+  justify-content: center;
+  /* Center items */
+}
+
+/* Navbar List Item */
+.navbar ul li {
+  margin: 0 15px;
+  /* Space between list items */
+}
+
+/* Navbar Link Styling */
+.navbar ul li a {
+  font-size: 21px;
+  font-weight: bold;
+  text-decoration: none;
+  /* Remove underline */
+  color: #000000;
+  /* Black text color */
+  padding: 10px 15px;
+  /* Padding for clickable area */
+  transition: background-color 0.3s;
+  /* Smooth background transition */
+}
+
+/* Navbar Link Hover Effect */
+.navbar ul li a:hover {
+  /* color:#FFAD51; */
+  color: #ff5722;
+}
+
+/* Theme Toggle Icon */
+.theme-toggle {
+  cursor: pointer;
+  /* Change cursor to pointer */
+  font-size: 24px;
+  /* Icon size */
+}
+
+/* Sun Icon Color */
+#sun-icon {
+  color: #f39c12;
+  /* Color for sun icon */
+}
+
+/* Moon Icon Color */
+#moon-icon {
+  color: #f1c40f;
+  /* Color for moon icon */
+}
+
+/* .weather-details */
+.weather-container {
+  height: 700px;
+  display: flex;
+}
+
+.weather-dis {
+  margin-top: 150px;
+  display: flex;
+  justify-content: right;
+  padding: 40px;
+  align-items: center;
+  height: 50vh;
+}
+
+/* Weather Display Styling */
+.weather-display {
+  width: 450px;
+  height: 450px;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 600px;
+}
+
+#cityName {
+  font-size: 40px;
+  display: flex;
+  justify-content: left;
+  color: #26d232;
+}
+
+#temp {
+  font-size: 65px;
+  font-weight: 540;
+  margin: 30px;
+}
+
+#condition {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+#wind {
+  font-size: 29px;
+  margin-bottom: 20px;
+}
+
+#humidity {
+  font-size: 29px;
+  margin-bottom: 20px;
+}
+
+.container h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.added-text {
+  margin-top: 100px;
+  width: auto;
+  height: auto;
+}
+
+.added-text p a {
+  font-size: 35px;
+  font-weight: 500;
+  color: #109f19;
+}
+
+.added-text h1 {
+  font-size: 50px;
+  margin: 50px;
+}
+
+.added-text p {
+  word-spacing: 15px;
+  margin: 40px;
+  font-size: 20px;
+  font-weight: 600;
+  color: black;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.search-bar input {
+  padding: 15px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 800px;
+  margin-right: 10px;
+}
+
+#citySearch {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 10px;
+  font-size: 22px;
+  width: 600px;
+  height: 60px;
+  /* Fixed width for larger screens */
+}
+
+#searchBtn {
+  transition: background-color 0.3s ease;
+}
+
+.search-bar button {
+  width: 150px;
+  height: 60px;
+  padding: 15px;
+  background-color: #ff5722;
+  color: white;
+  font-size: 19px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #e64a19;
+}
+
+.weather-display h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.weather-display p {
+  margin: 5px 0;
+}
+
+/* second-page */
+.second-page {
+  width: 100%;
+  height: 500px;
+  transition: background-color 0.3s ease;
+  transition: background-image 0.5s ease-in-out;
+  background-color: whitesmoke;
+}
+
+/* Forecast Section */
+.forecast {
+  border-radius: 10px;
+  text-align: center;
+  padding: 70px;
+  width: 100%;
+  max-width: 1300px;
+  /* Fixed width for larger screens */
+  height: auto;
+  /* Auto height for flexibility */
+  margin: 0 auto;
+  /* Centering */
+}
+
+.forecast h2 {
+  font-size: 40px;
+  padding: 20px;
+  color: #26d232;
+
+}
+
+/* Container for forecast cards */
+#forecast-cards {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Forecast card styling */
+.forecast-card {
+  padding: 10px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Card hover effect */
+.forecast-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Date styling */
+.forecast-card p:first-child {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #1e90ff;
+  margin-bottom: 10px;
+}
+
+/* Temperature styling */
+.forecast-card p {
+  margin: 8px 0;
+  font-size: 1rem;
+  color: #000000;
+}
+
+/* Max temperature */
+.forecast-card p:nth-child(2) {
+  font-size: 1.2rem;
+  color: #000000;
+  /* Tomato color for max temp */
+  font-weight: bold;
+}
+
+/* Min temperature */
+.forecast-card p:nth-child(3) {
+  font-size: 1.1rem;
+  color: #485159;
+  /* Dodger blue color for min temp */
+  font-weight: bold;
+}
+
+/* Weather condition styling */
+.forecast-card p:nth-child(4) {
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #777;
+}
+
+/* Remove default button styling */
+#forecastBtn {
+  margin-top: 50px;
+  background-color: #4CAF50;
+  /* Green background */
+  color: white;
+  /* White text */
+  padding: 10px 20px;
+  /* Padding around the text */
+  border: none;
+  /* Remove border */
+  border-radius: 5px;
+  /* Rounded corners */
+  cursor: pointer;
+  /* Pointer cursor on hover */
+  text-align: center;
+  /* Center text */
+  font-size: 18px;
+  /* Font size */
+  transition: background-color 0.3s ease;
+  /* Smooth transition for hover */
+}
+
+/* Style the anchor tag inside the button */
+#forecastBtn a {
+  color: white;
+  /* Anchor text inherits button color */
+  text-decoration: none;
+  /* Remove underline */
+  display: block;
+  /* Make the anchor fill the button */
+}
+
+/* Hover effect for the button */
+#forecastBtn:hover {
+  background-color: #45a049;
+  /* Darker green on hover */
+}
+
+/* third page */
+.third-page {
+  width: 100%;
+  height: 700px;
+  background-color: rgb(240, 219, 219);
+}
+
+
+#text {
+  color: #9f57d2;
+  text-align: center;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  font: large;
+}
+
+.recent-search {
+  padding-top: 80px;
+  font-size: 22px;
+  color: #1e1e1e;
+}
+
+.recent-search h2 {
+  color: #3c4247;
+  text-align: center;
+}
+
+#recentSearchList {
+  margin-top: 50px;
+  height: 401px;
+  display: flex;
+  justify-content: center;
+  /* Center the list items */
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  overflow: hidden;
+  /* Hide overflow */
+  position: relative;
+}
+
+
+#recentSearchList li {
+  margin-top: 150px;
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+  background-color: white;
+  padding: 10px;
+  margin: 10px auto;
+  max-width: 400px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  min-width: 300px;
+  /* Width of each li */
+  height: 400px;
+}
+
+
+#recentSearchList li:hover {
+  color: #e97624;
+  transform: scale(0.9);
+}
+
+/* Style for the city name */
+#recentSearchList li div:first-child strong {
+  font-size: 25px;
+  /* Larger font size for city name */
+}
+
+/* Style for the weather details (temperature and weather description) */
+.weather-details {
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  background-color: #ffffff87;
+  ;
+  transform: rotate(-90deg);
+  left: -10px;
+  top: 50%;
+  transform-origin: left center;
+  margin-top: 190px;
+  margin-left: 30px;
+}
+
+#recentSearchList li img {
+  background-color: #ffffff76;
+  margin-top: 0px;
+  left: -20px;
+  transform-origin: left center;
+}
+
+/* Initially, only the first 4 list items are visible */
+#recentSearchList li:nth-child(-n+4) {
+  opacity: 1;
+}
+
+
+
+
+/* Flex container to hold both sections side by side */
+.container-3 {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 40px;
+  background-color: whitesmoke;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #3c4247;
+}
+
+.chart-container,
+.map-container {
+  flex: 1;
+  /* Equal width */
+  padding: 20px;
+}
+
+#temperatureChart,
+#map {
+  width: 100%;
+  height: 400px;
+  border-radius: 8px;
+  box-shadow: 5px 4px 6px rgba(0, 0, 0, 0.1);
+}
+footer {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.footer-content h2 {
+  color: #6A0DAD;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.footer-menu {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.footer-menu li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.footer-menu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+}
+
+.footer-menu a:hover {
+  color: #6A0DAD;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 24px;
+  color: #333;
+}
+
+.social-icons a:hover {
+  color: #6A0DAD;
+}
+
+footer p {
+  color: #666;
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+footer p:last-child {
+  font-size: 16px;
+  font-style: italic;
+  /* Add styling to "Developed by" */
+}
+/* /* Dark Mode Variables */
+:root {
+  --background-color-dark: #121212;
+  --text-color-dark: #e0e0e0;
+  --header-bg-dark: #1e1e1e;
+  --card-bg-dark: #333;
+  --link-hover-dark: #ff8c00;
+  --accent-color-dark: #26d232;
+  --footer-bg-dark: #181818;
+}
+
+/* Apply dark mode styles */
+body.dark-mode .front-page {
+  background-image: url(main-bg-images/dark-mountain.jpg);
+}
+
+/* Dark Mode Variables */
+:root {
+  --background-color-dark: #121212;
+  --text-color-dark: #e0e0e0;
+  --header-bg-dark: #1e1e1e;
+  --card-bg-dark: #333;
+  --link-hover-dark: #ff8c00;
+  --accent-color-dark: #26d232;
+  --footer-bg-dark: #181818;
+  --second-page-bg-dark: #1e1e1e;
+  /* Slightly lighter than main background */
+  --third-page-bg-dark: #2c2c2c;
+  /* Medium gray */
+  --container-3-bg-dark: #242424;
+  /* Darker than second page */
+}
+
+/* Apply dark mode styles */
+body.dark-mode {
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
+}
+
+body.dark-mode header {
+  background-color: var(--header-bg-dark);
+}
+
+body.dark-mode .navbar ul li a {
+  color: var(--text-color-dark);
+}
+
+body.dark-mode .navbar ul li a:hover {
+  color: var(--link-hover-dark);
+}
+
+/* Weather Display in Dark Mode */
+body.dark-mode .weather-display {
+  background-color: rgba(51, 51, 51, 0.85);
+  color: var(--text-color-dark);
+}
+
+body.dark-mode #citySearch {
+  color: var(--footer-bg-dark);
+}
+
+body.dark-mode #forecast-cards .forecast-card {
+  background-color: var(--card-bg-dark);
+  color: var(--text-color-dark);
+}
+
+body.dark-mode .forecast-card p:first-child {
+  color: #ff8c00;
+}
+
+body.dark-mode .forecast-card p:nth-child(3) {
+  color: #1e90ff;
+}
+
+/* Search Bar */
+body.dark-mode .search-bar input {
+  background-color: #333;
+  color: var(--text-color-dark);
+  border: 1px solid #555;
+}
+
+body.dark-mode .search-bar button {
+  background-color: var(--link-hover-dark);
+}
+
+body.dark-mode .search-bar button:hover {
+  background-color: #cc7000;
+}
+
+/* Recent Search List */
+body.dark-mode #recentSearchList li {
+  background-color: var(--card-bg-dark);
+  color: var(--text-color-dark);
+}
+
+body.dark-mode #recentSearchList li:hover {
+  color: var(--link-hover-dark);
+}
+
+/* Page Sections */
+body.dark-mode .second-page {
+  background-color: var(--second-page-bg-dark);
+  border-left: 5px solid var(--accent-color-dark);
+  /* Optional accent border */
+}
+
+body.dark-mode .third-page {
+  background-color: var(--third-page-bg-dark);
+  border-left: 5px solid #ff8c00;
+  /* Optional accent border */
+}
+
+body.dark-mode .third-page h2 {
+  color: #f1c40f;
+}
+
+body.dark-mode .container-3 {
+  background-color: var(--container-3-bg-dark);
+  border-left: 5px solid #1e90ff;
+  /* Optional accent border */
+}
+
+body.dark-mode h1 {
+  color: var(--accent-color-dark);
+}
+
+body.dark-mode .chart-container,
+body.dark-mode .map-container {
+  background-color: var(--header-bg-dark);
+}
+
+/* Footer */
+body.dark-mode footer {
+  background-color: var(--footer-bg-dark);
+}
+
+body.dark-mode .footer-content h2 {
+  color: var(--accent-color-dark);
+}
+
+body.dark-mode .footer-menu a {
+  color: var(--text-color-dark);
+}
+
+body.dark-mode .footer-menu a:hover {
+  color: var(--accent-color-dark);
+}
+
+body.dark-mode .social-icons a {
+  color: var(--text-color-dark);
+}
+
+body.dark-mode .social-icons a:hover {
+  color: var(--accent-color-dark);
+}
+
+body.dark-mode footer p {
+  color: var(--text-color-dark);
+}
+/* Responsive Layouts */
+@media (max-width: 768px) {
+  /* For tablets and phones */
+  header {
+    padding: 20px;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  header h1 {
+    font-size: 28px;
+  }
+
+  header p {
+    font-size: 16px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar ul li {
+    margin: 10px 0;
+  }
+
+  .weather-container {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  .weather-display {
+    width: 90%;
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  #cityName {
+    font-size: 28px;
+  }
+
+  #temp {
+    font-size: 50px;
+  }
+
+  #condition,
+  #wind,
+  #humidity {
+    font-size: 24px;
+  }
+
+  .forecast {
+    padding: 30px;
+  }
+
+  #forecast-cards {
+    flex-direction: column;
+  }
+
+  .forecast-card {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .container-3 {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .chart-container,
+  .map-container {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* For smaller phones */
+  header h1 {
+    font-size: 24px;
+  }
+
+  header p {
+    font-size: 14px;
+  }
+
+  .search-bar input {
+    width: 100%;
+  }
+
+  .search-bar button {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .forecast-card {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .weather-display {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  #recentSearchList li {
+    font-size: 18px;
+  }
+}
