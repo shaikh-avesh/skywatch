@@ -1,4 +1,4 @@
-const apiKey = 'eddb6f6ee4d3940f8c25b9141b0307fe'; // Replace with your actual OpenWeather API key
+ const apiKey = 'eddb6f6ee4d3940f8c25b9141b0307fe'; // Replace with your actual OpenWeather API key
 let temperatureChart; // Global variable to store the chart instance
 const defaultCity = "London";
 const temperatureData = []; // To store temperature data for the graph
@@ -435,29 +435,29 @@ function displayRecentSearches(searches) {
 function getBackgroundImage(city) {
   switch (city.toLowerCase()) {
       case 'paris':
-          return 'url(city-images/paris.jpg)'; // Replace with actual path to Paris image
+          return 'url(paris.jpg)'; // Replace with actual path to Paris image
       case 'london':
-          return 'url(city-images/london.jpg)'; // Replace with actual path to London image
+          return 'url(london.jpg)'; // Replace with actual path to London image
       case 'new york':
-          return 'url(city-images/new-york.jpg)'; // Replace with actual path to New York image
+          return 'url(new-york.jpg)'; // Replace with actual path to New York image
       case 'tokyo':
-          return 'url(city-images/tokyo.jpeg)'; // Replace with actual path to Tokyo image
+          return 'url(tokyo.jpeg)'; // Replace with actual path to Tokyo image
       case 'sydney':
-          return 'url(city-images/sydney.jpg)'; // Replace with actual path to Sydney image
+          return 'url(sydney.jpg)'; // Replace with actual path to Sydney image
       case 'africa':
-          return 'url(city-images/africa.jpg)';
+          return 'url(africa.jpg)';
       case 'dubai':
-          return 'url(city-images/dubai.jpeg)';
+          return 'url(dubai.jpeg)';
       case 'delhi':
-          return 'url(city-images/delhi.jpeg)';
+          return 'url(delhi.jpeg)';
       case 'mumbai':
-          return 'url(city-images/mumbai.jpg)';
+          return 'url(mumbai.jpg)';
       case 'rio':
-          return 'url(city-images/rio.jpg)';
+          return 'url(rio.jpg)';
       case 'ahmedabad':
-          return 'url(city-images/ahme.jpg)';
+          return 'url(ahme.jpg)';
       default:
-          return 'url(city-images/default-bg.jpg)'; // Fallback image if city not found
+          return 'url(default-bg.jpg)'; // Fallback image if city not found
   }
 }
 
